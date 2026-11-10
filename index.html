@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrum Mastery — De Cero a Scrum Master</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0d1117;--bg2:#161b22;--bg3:#21262d;--border:#30363d;
+    --text:#e6edf3;--muted:#8b949e;--accent:#f78166;--green:#3fb950;
+    --blue:#58a6ff;--purple:#bc8cff;--yellow:#e3b341;--orange:#db6d28;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--mono); letter-spacing: -.015em; min-height: 100vh; overflow-x: hidden; }
+  #bg-rain { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: .5; }
+  body::after { content:''; position: fixed; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.45) 100%); }
+
+  .topnav { position: sticky; top: 0; z-index: 55; background: rgba(22,27,34,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: .8rem 2rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .topnav .brand { font-size: 1.05rem; font-weight: 700; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: .5rem; letter-spacing: -.02em; }
+  .topnav .brand .logo { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--purple)); display: flex; align-items: center; justify-content: center; font-size: .9rem; }
+  .topnav .links { display: flex; gap: .4rem; flex-wrap: wrap; }
+  .topnav .links a { color: var(--muted); text-decoration: none; padding: .35rem .7rem; border-radius: 6px; font-size: .76rem; transition: all .2s; border: 1px solid transparent; }
+  .topnav .links a:hover { color: var(--blue); border-color: var(--blue); background: rgba(88,166,255,.08); }
+
+  .lang-switch { display: flex; gap: .25rem; margin-left: auto; align-items: center; }
+  .lang-switch .lang-label { color: var(--muted); font-size: .72rem; margin-right: .2rem; }
+  .lang-switch button { background: var(--bg2); border: 1px solid var(--border); color: var(--muted); padding: .28rem .55rem; border-radius: 6px; cursor: pointer; font-size: .74rem; font-weight: 700; font-family: var(--mono); transition: all .18s; }
+  .lang-switch button:hover { border-color: var(--accent); color: var(--text); }
+  .lang-switch button.active { background: linear-gradient(135deg, var(--accent), var(--purple)); border-color: transparent; color: #fff; }
+
+  main { position: relative; z-index: 3; }
+  .hero { padding: 4.5rem 2rem 3rem; text-align: center; }
+  .hero .big-badge { width: 96px; height: 96px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--purple)); display: flex; align-items: center; justify-content: center; font-size: 3rem; margin: 0 auto 1.5rem; box-shadow: 0 0 36px rgba(247,129,102,.35); animation: floaty 5s ease-in-out infinite; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .hero h1 { font-size: clamp(2.2rem,6vw,4rem); font-weight: 800; line-height: 1.05; margin-bottom: .6rem; letter-spacing: -.03em; }
+  .hero h1 .hl { background: linear-gradient(135deg, var(--accent), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero .tagline { color: var(--text); font-size: clamp(1rem,2.5vw,1.4rem); font-weight: 600; min-height: 1.6em; }
+  .hero .tagline .cursor { color: var(--accent); font-weight: 400; animation: blink 1.05s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .hero p { color: var(--muted); font-size: 1.05rem; max-width: 600px; margin: 1.2rem auto 2rem; line-height: 1.6; }
+  .hero .tags { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; }
+  .tag { background: var(--bg3); border: 1px solid var(--border); border-radius: 20px; padding: .3rem .9rem; font-size: .76rem; color: var(--muted); }
+  .tag.g { border-color: var(--green); color: var(--green); }
+  .tag.b { border-color: var(--blue); color: var(--blue); }
+  .tag.p { border-color: var(--purple); color: var(--purple); }
+
+  .section-title { padding: 1rem 2rem 0; max-width: 1400px; margin: 0 auto; }
+  .section-title h2 { font-size: 1.3rem; color: var(--muted); border-left: 3px solid var(--accent); padding-left: .8rem; letter-spacing: -.02em; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px,1fr)); gap: 1.4rem; padding: 1.5rem 2rem 2rem; max-width: 1400px; margin: 0 auto; }
+  .card { background: rgba(22,27,34,.92); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; transition: all .25s; cursor: pointer; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; }
+  .card::before { content:''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--card-accent,transparent) 0%, transparent 60%); opacity: 0; transition: opacity .3s; }
+  .card:hover { transform: translateY(-5px) scale(1.015); box-shadow: 0 14px 40px rgba(0,0,0,.5); border-color: var(--card-border,var(--border)); }
+  .card:hover::before { opacity: 1; }
+  .card .top { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; }
+  .card .badge { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+  .card .mod { font-size: .72rem; color: var(--muted); font-weight: 600; }
+  .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; letter-spacing: -.02em; }
+  .card p { color: var(--muted); font-size: .84rem; line-height: 1.55; }
+  .card .level { display: inline-block; margin-top: .9rem; font-size: .7rem; padding: .2rem .6rem; border-radius: 10px; font-weight: 600; }
+  .lvl-b { background: rgba(63,185,80,.15); color: var(--green); }
+  .lvl-i { background: rgba(88,166,255,.15); color: var(--blue); }
+  .lvl-a { background: rgba(188,140,255,.15); color: var(--purple); }
+  .lvl-e { background: rgba(247,129,102,.15); color: var(--accent); }
+
+  footer { position: relative; z-index: 3; text-align: center; padding: 2rem; color: var(--muted); font-size: .8rem; border-top: 1px solid var(--border); margin-top: 1rem; }
+
+  @keyframes fadeUp { from { opacity:0; transform: translateY(28px); } to { opacity:1; transform:none; } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  .hero .big-badge { animation: floaty 5s ease-in-out infinite, fadeIn .8s ease both; }
+  .hero h1 { animation: fadeUp .7s cubic-bezier(.2,.7,.2,1) both; animation-delay: .1s; }
+  .hero .tagline { animation: fadeUp .7s ease both; animation-delay: .25s; }
+  .hero p { animation: fadeUp .7s ease both; animation-delay: .35s; }
+  .hero .tags { animation: fadeUp .7s ease both; animation-delay: .45s; }
+  .section-title h2 { animation: fadeUp .6s ease both; animation-delay: .5s; }
+  .card { animation: fadeUp .65s cubic-bezier(.2,.7,.2,1) both; }
+  .card:nth-child(1){animation-delay:.55s}.card:nth-child(2){animation-delay:.63s}.card:nth-child(3){animation-delay:.71s}.card:nth-child(4){animation-delay:.79s}.card:nth-child(5){animation-delay:.87s}.card:nth-child(6){animation-delay:.95s}.card:nth-child(7){animation-delay:1.03s}
+  footer { animation: fadeIn .8s ease both; animation-delay: 1.1s; }
+
+  @media (max-width: 640px) { .topnav .links { display: none; } }
+  @media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="index.html" class="brand"><span class="logo">⚡</span>Scrum Mastery</a>
+  <div class="links">
+    <a href="01-fundamentos.html">01 Fundamentos</a>
+    <a href="02-roles.html">02 Roles</a>
+    <a href="03-eventos.html">03 Eventos</a>
+    <a href="04-artefactos.html">04 Artefactos</a>
+    <a href="05-scrum-master.html">05 Scrum Master</a>
+    <a href="06-flujo-metricas.html">06 Flujo</a>
+    <a href="07-glosario.html">07 Glosario</a>
+  </div>
+</div>
+
+<main>
+<div class="hero">
+  <div class="big-badge">⚡</div>
+  <h1>Scrum <span class="hl">Mastery</span></h1>
+  <div class="tagline"><span id="tw">De cero a Scrum Master</span><span class="cursor">▌</span></div>
+  <p data-en="Interactive presentations with clear diagrams, real examples and hands-on practice — Agile and the complete Scrum framework." data-pt="Apresentações interativas com diagramas claros, exemplos reais e prática — Agile e o framework Scrum completo.">Presentaciones interactivas con diagramas claros, ejemplos reales y práctica — Agile y el framework Scrum completo.</p>
+  <div class="tags">
+    <span class="tag g" data-en="Agile & Scrum" data-pt="Agile & Scrum">Agile & Scrum</span>
+    <span class="tag b" data-en="Roles" data-pt="Roles">Roles</span>
+    <span class="tag b" data-en="Events" data-pt="Eventos">Eventos</span>
+    <span class="tag p" data-en="Artifacts" data-pt="Artefatos">Artefactos</span>
+    <span class="tag p" data-en="Scrum Master" data-pt="Scrum Master">Scrum Master</span>
+  </div>
+</div>
+
+<div class="section-title"><h2 data-en="📚 Modules" data-pt="📚 Módulos">📚 Módulos</h2></div>
+<div class="grid">
+
+  <a href="01-fundamentos.html" class="card" style="--card-accent:rgba(63,185,80,.08);--card-border:var(--green);">
+    <div class="top"><div class="badge" style="background:rgba(63,185,80,.15)">🌱</div><span class="mod">MÓDULO 01</span></div>
+    <h3 data-en="Agile & Scrum fundamentals" data-pt="Fundamentos de Agile & Scrum">Fundamentos de Agile & Scrum</h3>
+    <p data-en="The Agile Manifesto, what Scrum is, its pillars and values." data-pt="O Manifesto Ágil, o que é Scrum, seus pilares e valores.">El Manifiesto Ágil, qué es Scrum, sus pilares y valores.</p>
+    <span class="level lvl-b" data-en="Beginner" data-pt="Iniciante">Principiante</span>
+  </a>
+
+  <a href="02-roles.html" class="card" style="--card-accent:rgba(88,166,255,.08);--card-border:var(--blue);">
+    <div class="top"><div class="badge" style="background:rgba(88,166,255,.15)">👥</div><span class="mod">MÓDULO 02</span></div>
+    <h3 data-en="Roles" data-pt="Roles">Roles</h3>
+    <p data-en="Product Owner, Scrum Master and Developers — who does what." data-pt="Product Owner, Scrum Master e Developers — quem faz o quê.">Product Owner, Scrum Master y Developers — quién hace qué.</p>
+    <span class="level lvl-i" data-en="Intermediate" data-pt="Intermediário">Intermedio</span>
+  </a>
+
+  <a href="03-eventos.html" class="card" style="--card-accent:rgba(88,166,255,.08);--card-border:var(--blue);">
+    <div class="top"><div class="badge" style="background:rgba(88,166,255,.15)">📅</div><span class="mod">MÓDULO 03</span></div>
+    <h3 data-en="Events" data-pt="Eventos">Eventos</h3>
+    <p data-en="Sprint, Planning, Daily Scrum, Review and Retrospective." data-pt="Sprint, Planning, Daily Scrum, Review e Retrospective.">Sprint, Planning, Daily Scrum, Review y Retrospective.</p>
+    <span class="level lvl-i" data-en="Intermediate" data-pt="Intermediário">Intermedio</span>
+  </a>
+
+  <a href="04-artefactos.html" class="card" style="--card-accent:rgba(188,140,255,.08);--card-border:var(--purple);">
+    <div class="top"><div class="badge" style="background:rgba(188,140,255,.15)">📋</div><span class="mod">MÓDULO 04</span></div>
+    <h3 data-en="Artifacts" data-pt="Artefatos">Artefactos</h3>
+    <p data-en="Product Backlog, Sprint Backlog, Increment and the Definition of Done." data-pt="Product Backlog, Sprint Backlog, Increment e a Definition of Done.">Product Backlog, Sprint Backlog, Increment y la Definition of Done.</p>
+    <span class="level lvl-i" data-en="Intermediate" data-pt="Intermediário">Intermedio</span>
+  </a>
+
+  <a href="05-scrum-master.html" class="card" style="--card-accent:rgba(247,129,102,.08);--card-border:var(--accent);">
+    <div class="top"><div class="badge" style="background:rgba(247,129,102,.15)">🎯</div><span class="mod">MÓDULO 05</span></div>
+    <h3 data-en="The Scrum Master" data-pt="O Scrum Master">El Scrum Master</h3>
+    <p data-en="Servant leadership, facilitation, removing impediments and coaching." data-pt="Liderança servidora, facilitação, remoção de impedimentos e coaching.">Liderazgo servidor, facilitación, quitar impedimentos y coaching.</p>
+    <span class="level lvl-a" data-en="Advanced" data-pt="Avançado">Avanzado</span>
+  </a>
+
+  <a href="06-flujo-metricas.html" class="card" style="--card-accent:rgba(247,129,102,.08);--card-border:var(--accent);">
+    <div class="top"><div class="badge" style="background:rgba(247,129,102,.15)">📊</div><span class="mod">MÓDULO 06</span></div>
+    <h3 data-en="Flow & metrics" data-pt="Fluxo & métricas">Flujo y métricas</h3>
+    <p data-en="The full sprint flow, velocity and burndown charts, in practice." data-pt="O fluxo completo do sprint, velocity e burndown, na prática.">El flujo completo del sprint, velocity y burndown, en práctica.</p>
+    <span class="level lvl-a" data-en="Advanced" data-pt="Avançado">Avanzado</span>
+  </a>
+
+  <a href="07-glosario.html" class="card" style="--card-accent:rgba(247,129,102,.08);--card-border:var(--accent);">
+    <div class="top"><div class="badge" style="background:rgba(247,129,102,.15)">📖</div><span class="mod">MÓDULO 07</span></div>
+    <h3 data-en="Scrum glossary" data-pt="Glossário de Scrum">Glosario de Scrum</h3>
+    <p data-en="Every Scrum term: what it is and what it's for." data-pt="Todos os termos do Scrum: o que são e para que servem.">Todos los términos de Scrum: qué son y para qué sirven.</p>
+    <span class="level lvl-e" data-en="Reference" data-pt="Referência">Referencia</span>
+  </a>
+
+</div>
+</main>
+
+<footer data-en="Scrum Mastery — interactive presentations · 7 modules" data-pt="Scrum Mastery — apresentações interativas · 7 módulos">Scrum Mastery — presentaciones interactivas &nbsp;·&nbsp; 7 módulos</footer>
+
+<script src="assets/bg.js"></script>
+<script src="assets/slides.js"></script>
+<script>
+(function(){
+  var phrases={es:'De cero a Scrum Master',en:'From zero to Scrum Master',pt:'Do zero ao Scrum Master'};
+  var order=['es','en','pt'],idx=0,cur='es',el=document.getElementById('tw');
+  if(!el)return;
+  if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=phrases[document.documentElement.lang]||phrases.es;return;}
+  var timer=null;
+  function type(t){clearTimeout(timer);var i=0;el.textContent='';(function s(){if(i<=t.length){el.textContent=t.slice(0,i);i++;timer=setTimeout(s,70);}else{timer=setTimeout(erase,1700);}})();}
+  function erase(){var t=el.textContent;(function s(){if(t.length){t=t.slice(0,-1);el.textContent=t;timer=setTimeout(s,35);}else{idx=(idx+1)%order.length;cur=order[idx];timer=setTimeout(function(){type(phrases[cur]);},300);}})();}
+  function setLang(l){if(phrases[l]){cur=l;idx=order.indexOf(l);type(phrases[l]);}}
+  type(phrases[cur]);
+  setTimeout(function(){document.querySelectorAll('.lang-switch button[data-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.dataset.lang);});});},300);
+})();
+</script>
+</body>
+</html>

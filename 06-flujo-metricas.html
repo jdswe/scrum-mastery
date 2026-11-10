@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flujo y Métricas — Scrum Mastery</title>
+<link rel="stylesheet" href="assets/slides.css">
+</head>
+<body>
+<div class="progress-wrap"><div class="progress"></div></div>
+<div class="topnav">
+  <a href="index.html" class="brand"><span>⚡</span>Scrum Mastery</a>
+  <button class="toc-btn" data-nav="toc">☰ Índice</button>
+</div>
+<div class="counter"><span class="cur">01</span> / 00</div>
+<div class="controls">
+  <button class="ctrl-btn" data-nav="prev">‹</button>
+  <button class="ctrl-btn" data-nav="next">›</button>
+</div>
+<div class="toc-overlay">
+  <button class="toc-close" data-nav="close-toc">✕</button>
+  <h2 data-en="Index — Flow & metrics" data-pt="Índice — Fluxo & métricas">Índice — Flujo y métricas</h2>
+  <div class="toc-list"></div>
+</div>
+<div class="deck">
+
+<!-- 1 -->
+<section class="slide title-slide" data-title="Flujo y métricas" data-en-title="Flow & metrics" data-pt-title="Fluxo & métricas">
+  <span class="badge" data-en="Module 6 · Advanced" data-pt="Módulo 6 · Avançado">Módulo 6 · Avanzado</span>
+  <div class="emoji-big">📊</div>
+  <h1 data-en="Flow & <span class='hl'>metrics</span>" data-pt="Fluxo & <span class='hl'>métricas</span>">Flujo y <span class="hl">métricas</span></h1>
+  <p class="lead" data-en="How a Sprint really runs day to day, and how to read velocity and burndown." data-pt="Como um Sprint roda no dia a dia e como ler velocity e burndown.">Cómo corre un Sprint día a día y cómo leer velocity y burndown.</p>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-title="Flujo completo del Sprint" data-en-title="Full sprint flow" data-pt-title="Fluxo completo do Sprint">
+  <div class="slide-num">02</div>
+  <div class="kicker" data-en="Day by day" data-pt="Dia a dia">Día a día</div>
+  <h2 data-en="A <span class='hl'>Sprint</span>, step by step" data-pt="Um <span class='hl'>Sprint</span>, passo a passo">Un <span class="hl">Sprint</span>, paso a paso</h2>
+  <div class="diagram" style="flex-direction:column;align-items:stretch;gap:.5rem">
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center"><div class="step-pill g">Planning (día 1)</div><span class="arrow">→</span><div class="step-pill b">Daily + trabajo</div><span class="arrow">→</span><div class="step-pill b">…repiten…</div><span class="arrow">→</span><div class="step-pill p">Review (día final)</div><span class="arrow">→</span><div class="step-pill o">Retrospective</div></div>
+  </div>
+  <ol>
+    <li data-en="Day 1 — Planning: choose the goal and items.">Día 1 — Planning: elige la meta y los items.</li>
+    <li data-en="Days 1→N-1 — Daily + build the Increment; refine the backlog.">Días 1→N-1 — Daily + construye el Increment; refina el backlog.</li>
+    <li data-en="Last day — Review: show the Increment to stakeholders.">Último día — Review: muestra el Increment a los stakeholders.</li>
+    <li data-en="Last day — Retrospective: improve how the team works.">Último día — Retrospective: mejora cómo trabaja el equipo.</li>
+  </ol>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-title="Velocity — teoría" data-en-title="Velocity — theory" data-pt-title="Velocity — teoria">
+  <div class="slide-num">03</div>
+  <div class="kicker" data-en="Theory" data-pt="Teoria">Teoría</div>
+  <h2 data-en="<span class='hl'>Velocity</span>" data-pt="<span class='hl'>Velocity</span>"><span class="hl">Velocity</span></h2>
+  <p data-en="The sum of story points the team completed (Done) in a Sprint. Used only to forecast, not as a performance score." data-pt="A soma dos story points que o time concluiu (Done) num Sprint. Usada só pra prever, não como nota de desempenho.">La suma de story points que el equipo terminó (Done) en un Sprint. Se usa solo para prever, no como nota de desempeño.</p>
+  <div class="chart">
+    <div class="chart-title">Velocity per Sprint (points Done)</div>
+    <svg viewBox="0 0 540 180" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="150" x2="520" y2="150" stroke="#30363d"/><line x1="40" y1="20" x2="40" y2="150" stroke="#30363d"/>
+      <text x="20" y="150" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">0</text>
+      <text x="14" y="90" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">20</text>
+      <text x="14" y="35" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">40</text>
+      <g><rect x="70" y="80" width="50" height="70" fill="#3fb950"/><text x="95" y="170" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">S1</text><text x="95" y="74" text-anchor="middle" fill="#3fb950" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700">20</text></g>
+      <g><rect x="160" y="52" width="50" height="98" fill="#58a6ff"/><text x="185" y="170" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">S2</text><text x="185" y="46" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700">28</text></g>
+      <g><rect x="250" y="66" width="50" height="84" fill="#3fb950"/><text x="275" y="170" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">S3</text><text x="275" y="60" text-anchor="middle" fill="#3fb950" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700">24</text></g>
+      <g><rect x="340" y="38" width="50" height="112" fill="#58a6ff"/><text x="365" y="170" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">S4</text><text x="365" y="32" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700">32</text></g>
+      <g><rect x="430" y="49" width="50" height="101" fill="#3fb950"/><text x="455" y="170" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">S5</text><text x="455" y="43" text-anchor="middle" fill="#3fb950" font-family="JetBrains Mono,monospace" font-size="10" font-weight="700">29</text></g>
+      <line x1="40" y1="59" x2="520" y2="59" stroke="#f78166" stroke-dasharray="4 4"/><text x="510" y="54" text-anchor="end" fill="#f78166" font-family="JetBrains Mono,monospace" font-size="9">avg ≈ 27</text>
+    </svg>
+  </div>
+  <div class="note"><span class="note-label" data-en="Forecast" data-pt="Previsão">Previsión</span><p data-en="If velocity averages ~27 and a feature is ~80 points, expect ~3 Sprints. It's a forecast, not a promise." data-pt="Se a velocity média ~27 e uma feature é ~80 pontos, espere ~3 Sprints. É previsão, não promessa.">Si la velocity promedia ~27 y una feature es ~80 puntos, espera ~3 Sprints. Es previsión, no promesa.</p></div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-title="Burndown — teoría" data-en-title="Burndown — theory" data-pt-title="Burndown — teoria">
+  <div class="slide-num">04</div>
+  <div class="kicker" data-en="Theory" data-pt="Teoria">Teoría</div>
+  <h2 data-en="<span class='hl'>Sprint Burndown</span>" data-pt="<span class='hl'>Sprint Burndown</span>"><span class="hl">Sprint Burndown</span></h2>
+  <p data-en="Shows remaining work in the Sprint, day by day. The line should trend toward zero by the end." data-pt="Mostra o trabalho restante no Sprint, dia a dia. A linha deve tender a zero no fim.">Muestra el trabajo que queda en el Sprint, día a día. La línea debe tender a cero al final.</p>
+  <div class="chart">
+    <div class="chart-title">Sprint Burndown (10-day Sprint)</div>
+    <svg viewBox="0 0 540 180" xmlns="http://www.w3.org/2000/svg">
+      <line x1="40" y1="150" x2="520" y2="150" stroke="#30363d"/><line x1="40" y1="20" x2="40" y2="150" stroke="#30363d"/>
+      <polyline points="40,20 520,150" fill="none" stroke="#30363d" stroke-dasharray="5 5"/>
+      <text x="510" y="145" text-anchor="end" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">ideal</text>
+      <polyline points="40,20 90,30 140,28 190,45 240,48 290,55 340,70 390,72 440,90 490,110" fill="none" stroke="#f78166" stroke-width="3"/>
+      <circle cx="40" cy="20" r="3" fill="#f78166"/><circle cx="490" cy="110" r="3" fill="#f78166"/>
+      <text x="20" y="24" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">50</text><text x="22" y="150" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">0</text>
+      <text x="60" y="170" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">d1</text><text x="486" y="170" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">d10</text>
+    </svg>
+  </div>
+  <div class="tip"><span class="tip-label" data-en="Read it" data-pt="Como ler">Cómo leerlo</span><p data-en="Above the ideal line = behind. Below = ahead. A flat line means work isn't finishing." data-pt="Acima da linha ideal = atrasado. Abaixo = adiantado. Linha reta = nada acabando.">Encima de la línea ideal = atrasado. Debajo = adelantado. Línea plana = nada termina.</p></div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-title="Burndown vs Burnup" data-en-title="Burndown vs Burnup" data-pt-title="Burndown vs Burnup">
+  <div class="slide-num">05</div>
+  <div class="kicker" data-en="Variants" data-pt="Variantes">Variantes</div>
+  <h2 data-en="Burndown vs <span class='hl'>Burnup</span>" data-pt="Burndown vs <span class='hl'>Burnup</span>">Burndown vs <span class="hl">Burnup</span></h2>
+  <table class="tbl">
+    <tr><th></th><th data-en="Burndown" data-pt="Burndown">Burndown</th><th data-en="Burnup" data-pt="Burnup">Burnup</th></tr>
+    <tr><td data-en="Shows" data-pt="Mostra">Muestra</td><td data-en="Work remaining" data-pt="Trabalho restante">Trabajo restante</td><td data-en="Work done + total scope" data-pt="Feito + escopo total">Hecho + alcance total</td></tr>
+    <tr><td data-en="Scope change" data-pt="Mudança de escopo">Cambio de alcance</td><td data-en="Hidden" data-pt="Escondido">Oculto</td><td data-en="Visible (line moves)" data-pt="Visível (linha se move)">Visible (la línea se mueve)</td></tr>
+    <tr><td data-en="Best for" data-pt="Melhor para">Mejor para</td><td data-en="Sprint (fixed scope)" data-pt="Sprint (escopo fixo)">Sprint (alcance fijo)</td><td data-en="Release (changing scope)" data-pt="Release (escopo variável)">Release (alcance variable)</td></tr>
+  </table>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-title="Velocity — trampas" data-en-title="Velocity traps" data-pt-title="Armadilhas da velocity">
+  <div class="slide-num">06</div>
+  <div class="kicker" data-en="Traps" data-pt="Armadilhas">Trampas</div>
+  <h2 data-en="Velocity <span class='hl'>traps</span>" data-pt="Armadilhas da <span class='hl'>velocity</span>">Trampas de la <span class="hl">velocity</span></h2>
+  <div class="cards" style="max-width:1100px">
+    <div class="card o"><div class="card-icon">📈</div><h4 data-en="More points = better?" data-pt="Mais pontos = melhor?">¿Más puntos = mejor?</h4><p data-en="No. Points estimate size, not value. High velocity ≠ happy customers." data-pt="Não. Pontos medem tamanho, não valor. Velocity alta ≠ clientes felizes.">No. Los puntos miden tamaño, no valor. Velocity alta ≠ clientes felices.</p></div>
+    <div class="card o"><div class="card-icon">⚖️</div><h4 data-en="Compare teams" data-pt="Comparar times">Comparar equipos</h4><p data-en="Never. Each team's points are its own scale. Comparing is meaningless." data-pt="Nunca. Os pontos de cada time são sua escala. Comparar não faz sentido.">Nunca. Los puntos de cada equipo son su propia escala. Comparar no tiene sentido.</p></div>
+    <div class="card o"><div class="card-icon">🎯</div><h4 data-en="Committing to it" data-pt="Comprometer com ela">Comprometerse con ella</h4><p data-en="Setting a target velocity leads to inflating estimates to hit it." data-pt="Definir uma velocity-alvo leva a inflar estimativas pra bater.">Fijar una velocity objetivo lleva a inflar las estimas para cumplirla.</p></div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-title="Métricas que sí importan" data-en-title="Metrics that matter" data-pt-title="Métricas que importam">
+  <div class="slide-num">07</div>
+  <div class="kicker" data-en="Better signals" data-pt="Sinais melhores">Mejores señales</div>
+  <h2 data-en="Metrics that <span class='hl'>matter</span>" data-pt="Métricas que <span class='hl'>importam</span>">Métricas que <span class="hl">importan</span></h2>
+  <table class="tbl">
+    <tr><th data-en="Metric" data-pt="Métrica">Métrica</th><th data-en="What it tells you" data-pt="O que diz">Qué te dice</th></tr>
+    <tr><td data-en="Cycle time" data-pt="Cycle time">Cycle time</td><td data-en="Time from 'start' to 'Done' per item" data-pt="Tempo de 'início' a 'Done' por item">Tiempo de 'inicio' a 'Done' por item</td></tr>
+    <tr><td data-en="Lead time" data-pt="Lead time">Lead time</td><td data-en="Time from request to delivery" data-pt="Tempo do pedido à entrega">Tiempo del pedido a la entrega</td></tr>
+    <tr><td data-en="Throughput" data-pt="Throughput">Throughput</td><td data-en="Items Done per unit of time" data-pt="Itens Done por unidade de tempo">Items Done por unidad de tiempo</td></tr>
+    <tr><td data-en="Escaped defects" data-pt="Defeitos escapados">Defectos escapados</td><td data-en="Bugs found after release" data-pt="Bugs achados após release">Bugs hallados tras el release</td></tr>
+    <tr><td data-en="Sprint Goal hit %" data-pt="% de Sprint Goal atingida">% de Sprint Goal cumplida</td><td data-en="Did we reach the goal?" data-pt="Chegamos na meta?">¿Llegamos a la meta?</td></tr>
+  </table>
+  <div class="tip"><span class="tip-label" data-en="Rule" data-pt="Regra">Regla</span><p data-en="Measure outcomes (value, flow, quality), not just output." data-pt="Meça resultados (valor, fluxo, qualidade), não só saída.">Mide resultados (valor, flujo, calidad), no solo producción.</p></div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-title="Definition of Ready" data-en-title="Definition of Ready" data-pt-title="Definition of Ready">
+  <div class="slide-num">08</div>
+  <div class="kicker" data-en="Related practice" data-pt="Prática relacionada">Práctica relacionada</div>
+  <h2 data-en="<span class='hl'>Definition of Ready</span>" data-pt="<span class='hl'>Definition of Ready</span>"><span class="hl">Definition of Ready</span></h2>
+  <p data-en="A checklist an item must pass to be pulled into a Sprint. Not in the Scrum Guide, but common in practice." data-pt="Um checklist que um item precisa passar pra entrar num Sprint. Não está no Scrum Guide, mas é comum.">Un checklist que un item debe pasar para entrar a un Sprint. No está en la Guía de Scrum, pero es común.</p>
+  <div class="code-block">
+    <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><span data-en="DoR example" data-pt="exemplo de DoR">ejemplo de DoR</span></div>
+    <pre><span class="c"># Un item está 'Ready' cuando:</span>
+- <span class="t">tiene</span> criterios de aceptación claros
+- <span class="t">está</span> estimado por el equipo
+- <span class="t">cabe</span> en el Sprint (pequeño)
+- <span class="t">no</span> bloquea a nadie</pre>
+  </div>
+  <div class="warn"><span class="warn-label" data-en="Careful" data-pt="Cuidado">Cuidado</span><p data-en="A DoR can become a gate that blocks flow. Use it as guidance, not bureaucracy." data-pt="Um DoR pode virar um portão que bloqueia o fluxo. Use como guia, não burocracia.">Un DoR puede volverse una puerta que bloquea el flujo. Úsalo como guía, no como burocracia.</p></div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-title="Resumen de métricas" data-en-title="Metrics summary" data-pt-title="Resumo de métricas">
+  <div class="slide-num">09</div>
+  <div class="kicker" data-en="Summary" data-pt="Resumo">Resumen</div>
+  <h2 data-en="Flow & metrics <span class='hl'>in one breath</span>" data-pt="Fluxo & métricas <span class='hl'>em uma respiração</span>">Flujo y métricas <span class="hl">en una respiración</span></h2>
+  <ul>
+    <li data-en="Sprint = Planning → Daily+work → Review → Retro.">Sprint = Planning → Daily+trabajo → Review → Retro.</li>
+    <li data-en="Velocity = points Done per Sprint, only for forecasting.">Velocity = puntos Done por Sprint, solo para prever.</li>
+    <li data-en="Burndown = remaining work; should reach zero.">Burndown = trabajo que falta; debe llegar a cero.</li>
+    <li data-en="Burnup shows scope changes — better for releases.">Burnup muestra cambios de alcance — mejor para releases.</li>
+    <li data-en="Prefer outcome metrics: flow, quality, value.">Prefiere métricas de resultado: flujo, calidad, valor.</li>
+  </ul>
+</section>
+
+<!-- 10 -->
+<section class="slide title-slide" data-title="Siguiente: Glosario" data-en-title="Next: Glossary" data-pt-title="Próximo: Glossário">
+  <div class="emoji-big">📖</div>
+  <h2 data-en="The full <span class='hl'>Scrum glossary</span>" data-pt="O <span class='hl'>glossário</span> completo de Scrum">El <span class="hl">glosario</span> completo de Scrum</h2>
+  <p class="lead" data-en="Every Scrum term: what it is and what it's for." data-pt="Todos os termos do Scrum: o que são e para que servem.">Todos los términos de Scrum: qué son y para qué sirven.</p>
+  <div class="cards" style="max-width:700px">
+    <a href="07-glosario.html" class="card" style="text-decoration:none;color:inherit;--card-border:var(--accent)"><div class="card-icon">📖</div><h4 data-en="Module 7: Glossary" data-pt="Módulo 7: Glossário">Módulo 7: Glosario</h4><p data-en="all Scrum terms" data-pt="todos os termos do Scrum">todos los términos de Scrum</p></a>
+    <a href="index.html" class="card" style="text-decoration:none;color:inherit"><div class="card-icon">🏠</div><h4 data-en="Back to start" data-pt="Voltar ao início">Volver al inicio</h4><p data-en="Full index" data-pt="Índice completo">Índice completo</p></a>
+  </div>
+</section>
+
+</div>
+<script src="assets/bg.js"></script>
+<script src="assets/slides.js"></script>
+</body>
+</html>

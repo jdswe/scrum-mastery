@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artefactos — Scrum Mastery</title>
+<link rel="stylesheet" href="assets/slides.css">
+</head>
+<body>
+<div class="progress-wrap"><div class="progress"></div></div>
+<div class="topnav">
+  <a href="index.html" class="brand"><span>⚡</span>Scrum Mastery</a>
+  <button class="toc-btn" data-nav="toc">☰ Índice</button>
+</div>
+<div class="counter"><span class="cur">01</span> / 00</div>
+<div class="controls">
+  <button class="ctrl-btn" data-nav="prev">‹</button>
+  <button class="ctrl-btn" data-nav="next">›</button>
+</div>
+<div class="toc-overlay">
+  <button class="toc-close" data-nav="close-toc">✕</button>
+  <h2 data-en="Index — Artifacts" data-pt="Índice — Artefatos">Índice — Artefactos</h2>
+  <div class="toc-list"></div>
+</div>
+<div class="deck">
+
+<!-- 1 -->
+<section class="slide title-slide" data-title="Artefactos" data-en-title="Artifacts" data-pt-title="Artefatos">
+  <span class="badge" data-en="Module 4 · Intermediate" data-pt="Módulo 4 · Intermédio">Módulo 4 · Intermedio</span>
+  <div class="emoji-big">📋</div>
+  <h1 data-en="Scrum <span class='hl'>artifacts</span>" data-pt="<span class='hl'>Artefatos</span> do Scrum"><span class="hl">Artefactos</span> de Scrum</h1>
+  <p class="lead" data-en="Three artifacts make work and value visible, plus a commitment: the Definition of Done." data-pt="Três artefatos tornam o trabalho e o valor visíveis, mais um compromisso: a Definition of Done.">Tres artefactos hacen visibles el trabajo y el valor, más un compromiso: la Definition of Done.</p>
+  <div class="stats">
+    <div class="stat"><div class="num">3</div><div class="lbl" data-en="artifacts" data-pt="artefatos">artefactos</div></div>
+    <div class="stat"><div class="num">1</div><div class="lbl" data-en="commitment" data-pt="compromisso">compromiso</div></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-title="Vista general" data-en-title="Overview" data-pt-title="Visão geral">
+  <div class="slide-num">02</div>
+  <div class="kicker" data-en="The flow" data-pt="O fluxo">El flujo</div>
+  <h2 data-en="From idea to <span class='hl'>value</span>" data-pt="Da ideia ao <span class='hl'>valor</span>">De la idea al <span class="hl">valor</span></h2>
+  <div class="chart">
+    <svg viewBox="0 0 540 150" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8b949e"/></marker></defs>
+      <g><rect x="15" y="45" width="150" height="60" rx="10" fill="#161b22" stroke="#3fb950"/><text x="90" y="70" text-anchor="middle" fill="#3fb950" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Product Backlog</text><text x="90" y="90" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">all ideas, ordered</text></g>
+      <line x1="167" y1="75" x2="203" y2="75" stroke="#8b949e" stroke-width="2" marker-end="url(#a2)"/>
+      <g><rect x="205" y="45" width="150" height="60" rx="10" fill="#161b22" stroke="#58a6ff"/><text x="280" y="70" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Sprint Backlog</text><text x="280" y="90" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">this Sprint's plan</text></g>
+      <line x1="357" y1="75" x2="393" y2="75" stroke="#8b949e" stroke-width="2" marker-end="url(#a2)"/>
+      <g><rect x="395" y="45" width="130" height="60" rx="10" fill="#161b22" stroke="#bc8cff"/><text x="460" y="70" text-anchor="middle" fill="#bc8cff" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Increment</text><text x="460" y="90" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="9">usable & Done</text></g>
+    </svg>
+  </div>
+  <p data-en="Ideas go into the Product Backlog → the team pulls some into the Sprint Backlog → they turn them into a usable Increment." data-pt="Ideias vão ao Product Backlog → o time puxa algumas ao Sprint Backlog → as transforma num Increment usável.">Las ideas van al Product Backlog → el equipo toma algunas al Sprint Backlog → las convierte en un Increment utilizable.</p>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-title="Product Backlog" data-en-title="Product Backlog" data-pt-title="Product Backlog">
+  <div class="slide-num">03</div>
+  <div class="kicker" data-en="Artifact 1" data-pt="Artefato 1">Artefacto 1</div>
+  <h2 data-en="<span class='hl'>Product Backlog</span>" data-pt="<span class='hl'>Product Backlog</span>"><span class="hl">Product Backlog</span></h2>
+  <p data-en="An ordered list of everything needed in the product. The single source of truth." data-pt="Uma lista ordenada de tudo que o produto precisa. A única fonte de verdade.">Una lista ordenada de todo lo que necesita el producto. La única fuente de verdad.</p>
+  <ul>
+    <li data-en="Ordered by value: most valuable on top.">Ordenado por valor: lo más valioso arriba.</li>
+    <li data-en="The PO owns it; the team helps refine it.">El PO es dueño; el equipo ayuda a refinarlo.</li>
+    <li data-en="Items near the top are ready (small, clear). Los de arriba están listos (pequeños, claros).">Items near the top are ready (small, clear).</li>
+    <li data-en="Its commitment: the Product Goal." data-pt="Seu compromisso: a Product Goal.">Su compromiso: la Product Goal.</li>
+  </ul>
+  <div class="code-block">
+    <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><span data-en="example" data-pt="exemplo">ejemplo</span></div>
+    <pre><span class="c"># Product Backlog (ordenado)</span>
+1. <span class="t">Login</span> con Google            <span class="c">← ahora</span>
+2. <span class="t">Checkout</span> con tarjetas
+3. <span class="t">Buscador</span> de productos
+4. <span class="t">Modo</span> oscuro                 <span class="c">← algún día</span>
+   ┊</pre>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-title="Sprint Backlog" data-en-title="Sprint Backlog" data-pt-title="Sprint Backlog">
+  <div class="slide-num">04</div>
+  <div class="kicker" data-en="Artifact 2" data-pt="Artefato 2">Artefacto 2</div>
+  <h2 data-en="<span class='hl'>Sprint Backlog</span>" data-pt="<span class='hl'>Sprint Backlog</span>"><span class="hl">Sprint Backlog</span></h2>
+  <p data-en="The Sprint Goal + the items chosen for this Sprint + a plan to deliver them." data-pt="A Sprint Goal + os itens escolhidos pro Sprint + um plano pra entregá-los.">La Sprint Goal + los items elegidos para este Sprint + un plan para entregarlos.</p>
+  <ul>
+    <li data-en="Owned by the Developers.">Es de los Developers.</li>
+    <li data-en="It changes during the Sprint as the team learns (scope, not goal).">Cambia durante el Sprint según se aprende (alcance, no meta).</li>
+    <li data-en="Its commitment: the Sprint Goal." data-pt="Seu compromisso: a Sprint Goal.">Su compromiso: la Sprint Goal.</li>
+  </ul>
+  <div class="tip"><span class="tip-label" data-en="Practice" data-pt="Prática">Práctica</span><p data-en="If something big must enter, something of equal size leaves — to protect the Sprint Goal." data-pt="Se algo grande tem que entrar, algo do mesmo tamanho sai — pra proteger a Sprint Goal.">Si algo grande tiene que entrar, algo del mismo tamaño sale — para proteger la Sprint Goal.</p></div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-title="Increment" data-en-title="Increment" data-pt-title="Increment">
+  <div class="slide-num">05</div>
+  <div class="kicker" data-en="Artifact 3" data-pt="Artefato 3">Artefacto 3</div>
+  <h2 data-en="The <span class='hl'>Increment</span>" data-pt="O <span class='hl'>Increment</span>">El <span class="hl">Increment</span></h2>
+  <p data-en="A concrete step toward the Product Goal. Each Increment adds to all previous ones and is usable." data-pt="Um passo concreto rumo à Product Goal. Cada Increment soma aos anteriores e é usável.">Un paso concreto hacia la Product Goal. Cada Increment suma a los anteriores y es utilizable.</p>
+  <ul>
+    <li data-en="Multiple Increments can be created in one Sprint.">Se pueden crear varios Increments en un Sprint.</li>
+    <li data-en="An Increment is usable even if not released." data-pt="Um Increment é usável mesmo sem ser liberado.">Un Increment es utilizable aunque no se libere.</li>
+    <li data-en="An Increment is Done only if it meets the Definition of Done." data-pt="Só é Done se cumprir a Definition of Done.">Solo es Done si cumple la Definition of Done.</li>
+    <li data-en="Its commitment: the Definition of Done." data-pt="Seu compromisso: a Definition of Done.">Su compromiso: la Definition of Done.</li>
+  </ul>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-title="Definition of Done" data-en-title="Definition of Done" data-pt-title="Definition of Done">
+  <div class="slide-num">06</div>
+  <div class="kicker" data-en="The commitment" data-pt="O compromisso">El compromiso</div>
+  <h2 data-en="<span class='hl'>Definition of Done</span> (DoD)" data-pt="<span class='hl'>Definition of Done</span> (DoD)"><span class="hl">Definition of Done</span> (DoD)</h2>
+  <p data-en="A shared, written description of what an Increment must meet to be Done." data-pt="Uma descrição compartilhada e escrita do que um Increment precisa pra ser Done.">Una descripción compartida y escrita de lo que un Increment debe cumplir para estar Done.</p>
+  <div class="code-block">
+    <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><span data-en="DoD example" data-pt="exemplo de DoD">ejemplo de DoD</span></div>
+    <pre><span class="c"># Un item está 'Done' cuando:</span>
+- <span class="t">código</span> revisado por otro (peer review)
+- <span class="t">tests</span> automatizados pasan
+- <span class="t">sin</span> errores conocidos críticos
+- <span class="t">documentación</span> actualizada
+- <span class="t">desplegado</span> en staging y verificado
+- <span class="t">accesible</span> (cumple a11y básica)</pre>
+  </div>
+  <div class="warn"><span class="warn-label" data-en="Without a DoD" data-pt="Sem DoD">Sin DoD</span><p data-en='"Done" means a different thing to each person, and quality drifts.">"Done" significa algo distinto para cada persona y la calidad se pierde.</p></div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-title="Compromisos" data-en-title="Commitments" data-pt-title="Compromissos">
+  <div class="slide-num">07</div>
+  <div class="kicker" data-en="Each artifact has one" data-pt="Cada artefato tem um">Cada artefacto tiene uno</div>
+  <h2 data-en="Artifact → <span class='hl'>commitment</span>" data-pt="Artefato → <span class='hl'>compromisso</span>">Artefacto → <span class="hl">compromiso</span></h2>
+  <table class="tbl">
+    <tr><th data-en="Artifact" data-pt="Artefato">Artefacto</th><th data-en="Its commitment" data-pt="Seu compromisso">Su compromiso</th></tr>
+    <tr><td data-en="Product Backlog" data-pt="Product Backlog">Product Backlog</td><td data-en="Product Goal" data-pt="Product Goal">Product Goal</td></tr>
+    <tr><td data-en="Sprint Backlog" data-pt="Sprint Backlog">Sprint Backlog</td><td data-en="Sprint Goal" data-pt="Sprint Goal">Sprint Goal</td></tr>
+    <tr><td data-en="Increment" data-pt="Increment">Increment</td><td data-en="Definition of Done" data-pt="Definition of Done">Definition of Done</td></tr>
+  </table>
+  <div class="note"><span class="note-label" data-en="Why it matters" data-pt="Por que importa">Por qué importa</span><p data-en="The commitment focuses everyone on WHY the artifact exists, not just the list." data-pt="O compromisso foca todos no POR QUÊ do artefato, não só na lista.">El compromiso enfoca a todos en el POR QUÉ del artefacto, no solo en la lista.</p></div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-title="Refinamiento del backlog" data-en-title="Backlog refinement" data-pt-title="Refinamento do backlog">
+  <div class="slide-num">08</div>
+  <div class="kicker" data-en="Practice" data-pt="Prática">Práctica</div>
+  <h2 data-en="<span class='hl'>Backlog refinement</span>" data-pt="<span class='hl'>Refinamento</span> do backlog"><span class="hl">Refinamiento</span> del backlog</h2>
+  <p data-en="An ongoing activity (not an official event) to break down and clarify items so they're ready for a future Sprint." data-pt="Uma atividade contínua (não evento oficial) pra quebrar e clarear itens pra ficarem prontos num Sprint futuro.">Una actividad continua (no un evento oficial) para desglosar y aclarar items para que estén listos en un Sprint futuro.</p>
+  <div class="code-block">
+    <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><span data-en="user story format" data-pt="formato de user story">formato de user story</span></div>
+    <pre><span class="c"># Como [persona], quiero [acción], para [beneficio]</span>
+Como <span class="s">comprador</span>,
+quiero <span class="s">pagar con tarjeta</span>,
+para <span class="s">no usar otra app</span>.
+
+<span class="c"># Criterios de aceptación (cuándo está 'hecho' este item)</span>
+- <span class="t">acepta</span> Visa y Mastercard
+- <span class="t">muestra</span> error si la tarjeta falla
+- <span class="t">guarda</span> la transacción en la base de datos</pre>
+  </div>
+  <div class="tip"><span class="tip-label" data-en="Rule of thumb" data-pt="Regra prática">Regla práctica</span><p data-en="Items ready for the next Sprint should be small enough to finish in a few days." data-pt="Itens prontos pro próximo Sprint devem ser pequenos o bastante pra acabar em poucos dias.">Los items listos para el próximo Sprint deben ser pequeños para acabar en pocos días.</p></div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-title="Estimación" data-en-title="Estimation" data-pt-title="Estimativa">
+  <div class="slide-num">09</div>
+  <div class="kicker" data-en="Practice" data-pt="Prática">Práctica</div>
+  <h2 data-en="Estimating with <span class='hl'>Story Points</span>" data-pt="Estimando com <span class='hl'>Story Points</span>">Estimar con <span class="hl">Story Points</span></h2>
+  <p data-en="Estimate size/effort, not hours. The team compares items to a reference one." data-pt="Estime tamanho/esforço, não horas. O time compara itens a uma referência.">Estima tamaño/esfuerzo, no horas. El equipo compara items con uno de referencia.</p>
+  <div class="code-block">
+    <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><span data-en="planning poker" data-pt="planning poker">planning poker</span></div>
+    <pre><span class="c"># Serie Fibonacci (sumar complejidad, no lineal)</span>
+1, 2, 3, 5, 8, 13, 21
+
+<span class="c"># Cada uno da su número en secreto → se discuten diferencias</span>
+<span class="c"># Si uno dice 3 y otro 13, hay que hablar: algo no está claro.</span>
+
+<span class="c"># 'Login' = referencia de 3 puntos</span>
+Checkout = ?  <span class="c"># si el equipo dice 8, es más grande que login</span></pre>
+  </div>
+  <div class="note"><span class="note-label" data-en="Why not hours?" data-pt="Por que não horas?">¿Por qué no horas?</span><p data-en="Hours assume one speed fits all. Points accept that people work at different speeds." data-pt="Horas assumem uma velocidade pra todos. Pontos aceitam que pessoas trabalham em velocidades diferentes.">Las horas asumen una velocidad para todos. Los puntos aceptan que cada quien trabaja a su ritmo.</p></div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-title="Resumen de artefactos" data-en-title="Artifacts summary" data-pt-title="Resumo de artefatos">
+  <div class="slide-num">10</div>
+  <div class="kicker" data-en="Summary" data-pt="Resumo">Resumen</div>
+  <h2 data-en="Artifacts <span class='hl'>at a glance</span>" data-pt="Artefatos <span class='hl'>num olhar</span>">Artefactos <span class="hl">de un vistazo</span></h2>
+  <table class="tbl">
+    <tr><th data-en="Artifact" data-pt="Artefato">Artefacto</th><th data-en="What it is" data-pt="O que é">Qué es</th><th data-en="Owner" data-pt="Dono">Dueño</th></tr>
+    <tr><td data-en="Product Backlog" data-pt="Product Backlog">Product Backlog</td><td data-en="All ideas, ordered" data-pt="Todas as ideias, ordenadas">Todas las ideas, ordenadas</td><td data-en="Product Owner" data-pt="Product Owner">Product Owner</td></tr>
+    <tr><td data-en="Sprint Backlog" data-pt="Sprint Backlog">Sprint Backlog</td><td data-en="This Sprint's plan" data-pt="O plano deste Sprint">El plan de este Sprint</td><td data-en="Developers" data-pt="Developers">Developers</td></tr>
+    <tr><td data-en="Increment" data-pt="Increment">Increment</td><td data-en="Usable value, Done" data-pt="Valor usável, Done">Valor utilizable, Done</td><td data-en="Developers" data-pt="Developers">Developers</td></tr>
+    <tr><td data-en="Definition of Done" data-pt="Definition of Done">Definition of Done</td><td data-en="What 'Done' means" data-pt="O que 'Done' quer dizer">Qué quiere decir 'Done'</td><td data-en="Whole team" data-pt="Time todo">Todo el equipo</td></tr>
+  </table>
+</section>
+
+<!-- 11 -->
+<section class="slide title-slide" data-title="Siguiente: Scrum Master" data-en-title="Next: Scrum Master" data-pt-title="Próximo: Scrum Master">
+  <div class="emoji-big">🎯</div>
+  <h2 data-en="Now the <span class='hl'>Scrum Master</span>" data-pt="Agora o <span class='hl'>Scrum Master</span>">Ahora el <span class="hl">Scrum Master</span></h2>
+  <p class="lead" data-en="Servant leadership, facilitation, removing impediments and coaching." data-pt="Liderança servidora, facilitação, remoção de impedimentos e coaching.">Liderazgo servidor, facilitación, quitar impedimentos y coaching.</p>
+  <div class="cards" style="max-width:700px">
+    <a href="05-scrum-master.html" class="card" style="text-decoration:none;color:inherit;--card-border:var(--accent)"><div class="card-icon">🎯</div><h4 data-en="Module 5: Scrum Master" data-pt="Módulo 5: Scrum Master">Módulo 5: Scrum Master</h4><p data-en="servant leadership, impediments, coaching" data-pt="liderança servidora, impedimentos, coaching">liderazgo servidor, impedimentos, coaching</p></a>
+    <a href="index.html" class="card" style="text-decoration:none;color:inherit"><div class="card-icon">🏠</div><h4 data-en="Back to start" data-pt="Voltar ao início">Volver al inicio</h4><p data-en="Full index" data-pt="Índice completo">Índice completo</p></a>
+  </div>
+</section>
+
+</div>
+<script src="assets/bg.js"></script>
+<script src="assets/slides.js"></script>
+</body>
+</html>

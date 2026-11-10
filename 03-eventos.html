@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventos — Scrum Mastery</title>
+<link rel="stylesheet" href="assets/slides.css">
+</head>
+<body>
+<div class="progress-wrap"><div class="progress"></div></div>
+<div class="topnav">
+  <a href="index.html" class="brand"><span>⚡</span>Scrum Mastery</a>
+  <button class="toc-btn" data-nav="toc">☰ Índice</button>
+</div>
+<div class="counter"><span class="cur">01</span> / 00</div>
+<div class="controls">
+  <button class="ctrl-btn" data-nav="prev">‹</button>
+  <button class="ctrl-btn" data-nav="next">›</button>
+</div>
+<div class="toc-overlay">
+  <button class="toc-close" data-nav="close-toc">✕</button>
+  <h2 data-en="Index — Events" data-pt="Índice — Eventos">Índice — Eventos</h2>
+  <div class="toc-list"></div>
+</div>
+<div class="deck">
+
+<!-- 1 -->
+<section class="slide title-slide" data-title="Eventos" data-en-title="Events" data-pt-title="Eventos">
+  <span class="badge" data-en="Module 3 · Intermediate" data-pt="Módulo 3 · Intermédio">Módulo 3 · Intermedio</span>
+  <div class="emoji-big">📅</div>
+  <h1 data-en="Scrum <span class='hl'>events</span>" data-pt="<span class='hl'>Eventos</span> do Scrum"><span class="hl">Eventos</span> de Scrum</h1>
+  <p class="lead" data-en="Five events inside the Sprint create regular inspection and adaptation." data-pt="Cinco eventos dentro do Sprint criam inspeção e adaptação regular.">Cinco eventos dentro del Sprint crean inspección y adaptación regular.</p>
+  <div class="stats">
+    <div class="stat"><div class="num">5</div><div class="lbl" data-en="events" data-pt="eventos">eventos</div></div>
+    <div class="stat"><div class="num">1</div><div class="lbl" data-en="container" data-pt="contêiner">contenedor</div></div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-title="El ciclo del Sprint" data-en-title="The Sprint cycle" data-pt-title="O ciclo do Sprint">
+  <div class="slide-num">02</div>
+  <div class="kicker" data-en="The big picture" data-pt="O quadro geral">El panorama</div>
+  <h2 data-en="The <span class='hl'>Sprint cycle</span>" data-pt="O <span class='hl'>ciclo do Sprint</span>">El <span class="hl">ciclo del Sprint</span></h2>
+  <p data-en="The Sprint is the container. Inside it: Planning → work + Daily → Review → Retrospective → next Sprint." data-pt="O Sprint é o contêiner. Dentro: Planning → trabalho + Daily → Review → Retrospective → próximo Sprint.">El Sprint es el contenedor. Dentro: Planning → trabajo + Daily → Review → Retrospective → próximo Sprint.</p>
+  <div class="chart">
+    <div class="chart-title">Sprint cycle (e.g. 2 weeks)</div>
+    <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg">
+      <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8b949e"/></marker></defs>
+      <rect x="10" y="20" width="500" height="160" rx="14" fill="none" stroke="#30363d" stroke-dasharray="6 5"/>
+      <text x="260" y="14" text-anchor="middle" fill="#8b949e" font-family="JetBrains Mono,monospace" font-size="11">SPRINT</text>
+      <!-- nodes -->
+      <g><rect x="30" y="45" width="130" height="40" rx="20" fill="#161b22" stroke="#3fb950"/><text x="95" y="70" text-anchor="middle" fill="#3fb950" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Planning</text></g>
+      <g><rect x="195" y="45" width="130" height="40" rx="20" fill="#161b22" stroke="#58a6ff"/><text x="260" y="70" text-anchor="middle" fill="#58a6ff" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Work + Daily</text></g>
+      <g><rect x="360" y="45" width="130" height="40" rx="20" fill="#161b22" stroke="#bc8cff"/><text x="425" y="70" text-anchor="middle" fill="#bc8cff" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Review</text></g>
+      <g><rect x="195" y="125" width="130" height="40" rx="20" fill="#161b22" stroke="#f78166"/><text x="260" y="150" text-anchor="middle" fill="#f78166" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Retrospective</text></g>
+      <!-- arrows -->
+      <line x1="160" y1="65" x2="193" y2="65" stroke="#8b949e" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="325" y1="65" x2="358" y2="65" stroke="#8b949e" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="425" y1="85" x2="330" y2="123" stroke="#8b949e" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="195" y1="145" x2="95" y2="87" stroke="#8b949e" stroke-width="2" marker-end="url(#arr)"/>
+    </svg>
+  </div>
+  <div class="note"><span class="note-label" data-en="Why events" data-pt="Por que eventos">Por qué eventos</span><p data-en="Each event is a chance to inspect something and adapt. That's the whole point of Scrum." data-pt="Cada evento é uma chance de inspecionar e adaptar. Esse é o ponto do Scrum.">Cada evento es una chance de inspeccionar algo y adaptar. Ese es el punto de Scrum.</p></div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-title="El Sprint" data-en-title="The Sprint" data-pt-title="O Sprint">
+  <div class="slide-num">03</div>
+  <div class="kicker" data-en="Event 1 · container" data-pt="Evento 1 · contêiner">Evento 1 · contenedor</div>
+  <h2 data-en="The <span class='hl'>Sprint</span>" data-pt="O <span class='hl'>Sprint</span>">El <span class="hl">Sprint</span></h2>
+  <p data-en="A fixed-length timebox (1-4 weeks, same length every time). All other events happen inside it." data-pt="Um timebox de duração fixa (1-4 semanas, sempre igual). Os outros eventos acontecem dentro dele.">Un timebox de duración fija (1-4 semanas, siempre igual). Los demás eventos ocurren dentro.</p>
+  <ul>
+    <li data-en="No changes that endanger the Sprint Goal.">No hay cambios que pongan en riesgo la meta del Sprint.</li>
+    <li data-en="Quality doesn't decrease; the scope may be clarified.">La calidad no baja; el alcance se puede aclarar.</li>
+    <li data-en="The Product Backlog is refined as needed.">El Product Backlog se refina según haga falta.</li>
+    <li data-en="A Sprint can be cancelled if the goal becomes obsolete (rare)." data-pt="Um Sprint pode ser cancelado se a meta ficar obsoleta (raro).">Un Sprint se puede cancelar si la meta queda obsoleta (raro).</li>
+  </ul>
+  <div class="tip"><span class="tip-label" data-en="Practice" data-pt="Prática">Práctica</span><p data-en="Pick a Sprint length and keep it. Changing the length every time breaks rhythm and forecasting." data-pt="Escolha uma duração e mantenha. Mudar sempre quebra o ritmo e a previsão.">Elige una duración y manténla. Cambiarla siempre rompe el ritmo y la previsión.</p></div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-title="Sprint Planning" data-en-title="Sprint Planning" data-pt-title="Sprint Planning">
+  <div class="slide-num">04</div>
+  <div class="kicker" data-en="Event 2" data-pt="Evento 2">Evento 2</div>
+  <h2 data-en="<span class='hl'>Sprint Planning</span>" data-pt="<span class='hl'>Sprint Planning</span>"><span class="hl">Sprint Planning</span></h2>
+  <p data-en="The whole team plans the work for the Sprint. Answers three questions:" data-pt="O time todo planeja o trabalho do Sprint. Responde três perguntas:">Todo el equipo planifica el trabajo del Sprint. Responde tres preguntas:</p>
+  <div class="cards" style="max-width:1000px">
+    <div class="card g"><div class="card-icon">🎯</div><h4 data-en="Why?" data-pt="Por que?">¿Por qué?</h4><p data-en="The Sprint Goal — the one thing that makes this Sprint worth it." data-pt="A Sprint Goal — a coisa que faz o Sprint valer a pena.">La Sprint Goal — lo que hace que este Sprint valga la pena.</p></div>
+    <div class="card b"><div class="card-icon">📋</div><h4 data-en="What?" data-pt="O quê?">¿Qué?</h4><p data-en="Which Product Backlog items go into the Sprint Backlog." data-pt="Quais itens do Product Backlog vão ao Sprint Backlog.">Qué items del Product Backlog entran al Sprint Backlog.</p></div>
+    <div class="card p"><div class="card-icon">⚙️</div><h4 data-en="How?" data-pt="Como?">¿Cómo?</h4><p data-en="The plan to deliver them and meet the Definition of Done." data-pt="O plano pra entregá-los e cumprir a Definition of Done.">El plan para entregarlos y cumplir la Definition of Done.</p></div>
+  </div>
+  <div class="note"><span class="note-label" data-en="Timebox" data-pt="Timebox">Timebox</span><p data-en="Max 8 hours for a one-month Sprint (shorter for shorter Sprints)." data-pt="Máx 8 horas pra um Sprint de um mês (menos pra Sprints curtos).">Máx 8 horas para un Sprint de un mes (menos para Sprints cortos).</p></div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-title="Daily Scrum" data-en-title="Daily Scrum" data-pt-title="Daily Scrum">
+  <div class="slide-num">05</div>
+  <div class="kicker" data-en="Event 3" data-pt="Evento 3">Evento 3</div>
+  <h2 data-en="<span class='hl'>Daily Scrum</span>" data-pt="<span class='hl'>Daily Scrum</span>"><span class="hl">Daily Scrum</span></h2>
+  <p data-en="A 15-minute daily event for the Developers to inspect progress toward the Sprint Goal." data-pt="Um evento diário de 15 min pros Developers inspecionarem o progresso rumo à Sprint Goal.">Un evento diario de 15 min para que los Developers inspeccionen el progreso hacia la Sprint Goal.</p>
+  <div class="code-block">
+    <div class="code-header"><div class="dots"><span></span><span></span><span></span></div><span data-en="good Daily questions" data-pt="boas perguntas do Daily">buenas preguntas del Daily</span></div>
+    <pre><span class="c"># No es reporte al jefe. Es sincronización del equipo.</span>
+- <span class="s">¿Avanzamos hacia la Sprint Goal?</span>
+- <span class="s">¿Qué haré hoy para ayudar a la meta?</span>
+- <span class="s">¿Tengo algún impedimento?</span></pre>
+  </div>
+  <div class="warn"><span class="warn-label" data-en="Not a status meeting" data-pt="Não é reunião de status">No es reunión de status</span><p data-en="It's for the Developers to plan the next 24 hours, not to report to a manager." data-pt="É pros Developers planejarem as próximas 24h, não reportar ao manager.">Es para que los Developers planifiquen las próximas 24h, no para reportar a un manager.</p></div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-title="Sprint Review" data-en-title="Sprint Review" data-pt-title="Sprint Review">
+  <div class="slide-num">06</div>
+  <div class="kicker" data-en="Event 4" data-pt="Evento 4">Evento 4</div>
+  <h2 data-en="<span class='hl'>Sprint Review</span>" data-pt="<span class='hl'>Sprint Review</span>"><span class="hl">Sprint Review</span></h2>
+  <p data-en="The team shows the Increment to stakeholders and inspects the product together." data-pt="O time mostra o Increment aos stakeholders e inspeciona o produto juntos.">El equipo muestra el Increment a los stakeholders e inspecciona el producto juntos.</p>
+  <ul>
+    <li data-en="The PO explains what was Done and what wasn't.">El PO explica qué está Done y qué no.</li>
+    <li data-en="The Developers show the working Increment.">Los Developers muestran el Increment que funciona.</li>
+    <li data-en="Together they discuss what's next and adapt the backlog.">Juntos discuten qué sigue y adaptan el backlog.</li>
+  </ul>
+  <div class="tip"><span class="tip-label" data-en="Practice" data-pt="Prática">Práctica</span><p data-en="Show working software, not slides. A demo is worth a thousand reports." data-pt="Mostre software funcionando, não slides. Uma demo vale mil relatórios.">Muestra software funcionando, no diapositivas. Una demo vale mil reportes.</p></div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-title="Sprint Retrospective" data-en-title="Sprint Retrospective" data-pt-title="Sprint Retrospective">
+  <div class="slide-num">07</div>
+  <div class="kicker" data-en="Event 5" data-pt="Evento 5">Evento 5</div>
+  <h2 data-en="<span class='hl'>Sprint Retrospective</span>" data-pt="<span class='hl'>Sprint Retrospective</span>"><span class="hl">Sprint Retrospective</span></h2>
+  <p data-en="The team inspects ITSELF — how the Sprint went, people, relationships, process, tools." data-pt="O time inspeciona A SI MESMO — como foi o Sprint, pessoas, relações, processo, ferramentas.">El equipo se inspecciona A SÍ MISMO — cómo fue el Sprint, personas, relaciones, proceso, herramientas.</p>
+  <div class="diagram">
+    <div class="step-pill g" data-en="What went well?" data-pt="O que foi bem?">¿Qué fue bien?</div>
+    <span class="arrow">→</span>
+    <div class="step-pill o" data-en="What didn't?" data-pt="O que não?">¿Qué no?</div>
+    <span class="arrow">→</span>
+    <div class="step-pill b" data-en="What to improve?" data-pt="O que melhorar?">¿Qué mejorar?</div>
+    <span class="arrow">→</span>
+    <div class="step-pill p" data-en="Action items" data-pt="Itens de ação">Acciones</div>
+  </div>
+  <div class="note"><span class="note-label" data-en="Key" data-pt="Chave">Clave</span><p data-en="End with at most a few concrete improvements for next Sprint. Few and done beats many and forgotten." data-pt="Termine com poucas melhorias concretas pro próximo Sprint. Poucas e feitas vencem muitas e esquecidas.">Termina con pocas mejoras concretas para el próximo Sprint. Pocas y hechas ganan a muchas y olvidadas.</p></div>
+</section>
+
+<!-- 8 -->
+<section class="slide" data-title="Timeboxes" data-en-title="Timeboxes" data-pt-title="Timeboxes">
+  <div class="slide-num">08</div>
+  <div class="kicker" data-en="Max times" data-pt="Tempos máx">Tiempos máx</div>
+  <h2 data-en="Event <span class='hl'>timeboxes</span> (1-month Sprint)" data-pt="<span class='hl'>Timeboxes</span> dos eventos (Sprint de 1 mês)"><span class="hl">Timeboxes</span> de eventos (Sprint de 1 mes)</h2>
+  <table class="tbl">
+    <tr><th data-en="Event" data-pt="Evento">Evento</th><th data-en="Max time" data-pt="Tempo máx">Tiempo máx</th></tr>
+    <tr><td data-en="Sprint" data-pt="Sprint">Sprint</td><td data-en="4 weeks (fixed)" data-pt="4 semanas (fixo)">4 semanas (fijo)</td></tr>
+    <tr><td data-en="Sprint Planning" data-pt="Sprint Planning">Sprint Planning</td><td>8 h</td></tr>
+    <tr><td data-en="Daily Scrum" data-pt="Daily Scrum">Daily Scrum</td><td>15 min</td></tr>
+    <tr><td data-en="Sprint Review" data-pt="Sprint Review">Sprint Review</td><td>4 h</td></tr>
+    <tr><td data-en="Retrospective" data-pt="Retrospective">Retrospective</td><td>3 h</td></tr>
+  </table>
+  <div class="tip"><span class="tip-label" data-en="Rule" data-pt="Regra">Regla</span><p data-en="Shorter Sprints → proportionally shorter timeboxes. The Daily is always 15 min." data-pt="Sprints curtos → timeboxes menores proporcionalmente. O Daily é sempre 15 min.">Sprints cortos → timeboxes menores proporcionalmente. El Daily siempre es 15 min.</p></div>
+</section>
+
+<!-- 9 -->
+<section class="slide" data-title="Errores con eventos" data-en-title="Event mistakes" data-pt-title="Erros de eventos">
+  <div class="slide-num">09</div>
+  <div class="kicker" data-en="Traps" data-pt="Armadilhas">Trampas</div>
+  <h2 data-en="Common <span class='hl'>event mistakes</span>" data-pt="Erros comuns de <span class='hl'>eventos</span>">Errores <span class="hl">comunes</span> de eventos</h2>
+  <div class="cards" style="max-width:1100px">
+    <div class="card o"><div class="card-icon">🎙️</div><h4 data-en="Daily = status report" data-pt="Daily = relatório de status">Daily = reporte de status</h4><p data-en="It's for the team to plan, not to report up." data-pt="É pro time planejar, não reportar pra cima.">Es para que el equipo planee, no para reportar arriba.</p></div>
+    <div class="card o"><div class="card-icon">🎬</div><h4 data-en="Review = demo theater" data-pt="Review = teatro de demo">Review = teatro de demo</h4><p data-en="No stakeholder dialogue = lost feedback. Talk, don't just present." data-pt="Sem diálogo com stakeholders = feedback perdido. Converse, não só apresente.">Sin diálogo con stakeholders = feedback perdido. Conversa, no solo presenta.</p></div>
+    <div class="card o"><div class="card-icon">🔁</div><h4 data-en="Retro with no actions" data-pt="Retro sem ações">Retro sin acciones</h4><p data-en="Talking without changing anything is a complaint session. End with action items." data-pt="Falar sem mudar nada é sessão de reclamação. Termine com ações.">Hablar sin cambiar nada es una sesión de quejas. Termina con acciones.</p></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="slide" data-title="Resumen de eventos" data-en-title="Events summary" data-pt-title="Resumo de eventos">
+  <div class="slide-num">10</div>
+  <div class="kicker" data-en="Summary" data-pt="Resumo">Resumen</div>
+  <h2 data-en="Events <span class='hl'>at a glance</span>" data-pt="Eventos <span class='hl'>num olhar</span>">Eventos <span class="hl">de un vistazo</span></h2>
+  <table class="tbl">
+    <tr><th data-en="Event" data-pt="Evento">Evento</th><th data-en="Inspects" data-pt="Inspeciona">Inspecciona</th><th data-en="Adapts" data-pt="Adapta">Adapta</th></tr>
+    <tr><td data-en="Sprint" data-pt="Sprint">Sprint</td><td data-en="the container" data-pt="o contêiner">el contenedor</td><td data-en="scope within goal" data-pt="escopo dentro da meta">alcance dentro de la meta</td></tr>
+    <tr><td data-en="Planning" data-pt="Planning">Planning</td><td data-en="backlog + goal" data-pt="backlog + meta">backlog + meta</td><td data-en="the Sprint Backlog" data-pt="o Sprint Backlog">el Sprint Backlog</td></tr>
+    <tr><td data-en="Daily" data-pt="Daily">Daily</td><td data-en="progress" data-pt="progresso">progreso</td><td data-en="the next 24h plan" data-pt="o plano das próximas 24h">el plan de 24h</td></tr>
+    <tr><td data-en="Review" data-pt="Review">Review</td><td data-en="the Increment" data-pt="o Increment">el Increment</td><td data-en="the Product Backlog" data-pt="o Product Backlog">el Product Backlog</td></tr>
+    <tr><td data-en="Retrospective" data-pt="Retrospective">Retrospective</td><td data-en="the team &amp; process" data-pt="o time & processo">el equipo y proceso</td><td data-en="how we work" data-pt="como trabalhamos">cómo trabajamos</td></tr>
+  </table>
+</section>
+
+<!-- 11 -->
+<section class="slide title-slide" data-title="Siguiente: Artefactos" data-en-title="Next: Artifacts" data-pt-title="Próximo: Artefatos">
+  <div class="emoji-big">📋</div>
+  <h2 data-en="Now the <span class='hl'>artifacts</span>" data-pt="Agora os <span class='hl'>artefatos</span>">Ahora los <span class="hl">artefactos</span></h2>
+  <p class="lead" data-en="Product Backlog, Sprint Backlog, Increment and the Definition of Done." data-pt="Product Backlog, Sprint Backlog, Increment e a Definition of Done.">Product Backlog, Sprint Backlog, Increment y la Definition of Done.</p>
+  <div class="cards" style="max-width:700px">
+    <a href="04-artefactos.html" class="card p" style="text-decoration:none;color:inherit"><div class="card-icon">📋</div><h4 data-en="Module 4: Artifacts" data-pt="Módulo 4: Artefatos">Módulo 4: Artefactos</h4><p data-en="backlogs, increment, DoD" data-pt="backlogs, increment, DoD">backlogs, increment, DoD</p></a>
+    <a href="index.html" class="card" style="text-decoration:none;color:inherit"><div class="card-icon">🏠</div><h4 data-en="Back to start" data-pt="Voltar ao início">Volver al inicio</h4><p data-en="Full index" data-pt="Índice completo">Índice completo</p></a>
+  </div>
+</section>
+
+</div>
+<script src="assets/bg.js"></script>
+<script src="assets/slides.js"></script>
+</body>
+</html>
