@@ -2,7 +2,7 @@
 
 Curso interactivo de Scrum en formato de diapositivas, de los fundamentos hasta el día a día del Scrum Master.
 
-[![Vista previa](preview.jpg)](https://jdswe.github.io/scrum-mastery/)
+[![Vista previa](preview.png)](https://jdswe.github.io/scrum-mastery/)
 
 🔗 **Ver en línea:** https://jdswe.github.io/scrum-mastery/
 
